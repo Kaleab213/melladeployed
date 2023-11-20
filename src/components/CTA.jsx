@@ -1,10 +1,14 @@
-import { useNavigate } from "react-router";
-import styles from "../style";
-import Button from "./Button";
-import { motion } from "framer-motion";
+import { useNavigate } from 'react-router';
+import styles from '../style';
+import Button from './Button';
+import { motion } from 'framer-motion';
 
 const CTA = () => {
   const history = useNavigate();
+  function handleClick(link) {
+    window.scrollTo(0, 0);
+    return history('/contact');
+  }
   return (
     <section
       className={`${styles.flexCenter} ${styles.marginY} ${styles.padding} sm:flex-row flex-col rounded-[20px] box-shadow`}
@@ -19,7 +23,7 @@ const CTA = () => {
               duration: 0.3,
               ease: [0, 0.71, 0.2, 1.01],
               scale: {
-                type: "spring",
+                type: 'spring',
                 damping: 10,
                 stiffness: 100,
                 restDelta: 0.001,
@@ -41,7 +45,7 @@ const CTA = () => {
 
       <div
         className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-10`}
-        onClick={() => history("/contact")}
+        onClick={() => handleClick()}
       >
         <Button />
       </div>

@@ -21,45 +21,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
-        className={`w-full flex py-6 justify-between items-center navbar`}
-        // style={{ background: "rgba(0, 0, 0, 0.36)" }}
-        // style={{ background: "rgba(0, 0, 0, 0.36)" }}
-      >
-        <style>
-          {`
-        .navbar li {
-          position: relative;
-        }
-        
-        .navbar .dot {
-          position: absolute;
-          bottom: -10px;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background-color: #F6C90E;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        }
-
-        .navbar li:hover .dot {
-          opacity: 1;
-        }
-        
-        /* Add animations to the navigation items */
-        .navbar li {
-          transition: transform 0.3s ease;
-        }
-        
-        .navbar li:hover {
-          transform: translateY(-5px);
-        }
-      `}
-        </style>
-
+      <nav className={`w-full flex py-6 justify-between items-center navbar`}>
         <div className="flex items-center justify-between sm:ml-[3rem] ml-[0.5rem]">
           <img
             className="w-[2.5rem] h-[2.5rem] hover:cursor-pointer"

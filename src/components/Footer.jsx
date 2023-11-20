@@ -1,7 +1,20 @@
-import { footerLinks, socialMedia } from "../constants";
-import mellaLogo from "../assets/mellaLogo.png";
-
+import { footerLinks, socialMedia } from '../constants';
+import mellaLogo from '../assets/mellaLogo.png';
+import { useNavigate } from 'react-router';
 const Footer = () => {
+  const history = useNavigate();
+  function handleClick(link) {
+    // Check if link.name is either "Home", "About", or "Contact"
+    if (
+      link.name === 'Home' ||
+      link.name === 'About us' ||
+      link.name === 'Contact'
+    ) {
+      // Your onClick logic here
+      window.scrollTo(0, 0);
+      return history(`${link.link}`);
+    }
+  }
   return (
     <>
       <footer className="bg-white text-black px-[1rem] md:px-[4rem] lgg:px-[8rem]">
@@ -17,8 +30,13 @@ const Footer = () => {
                 {footerlink.links.map((link) => (
                   <li key={link.name} className="mb-2">
                     <a
-                      href={link.link}
                       className="text-lg hover:text-yellow-500 hover:cursor-pointer"
+                      href={
+                        link.name === 'loremipsum@gmail.com'
+                          ? link.link
+                          : undefined
+                      }
+                      onClick={() => handleClick(link)}
                     >
                       {link.name}
                     </a>

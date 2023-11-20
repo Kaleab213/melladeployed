@@ -1,12 +1,10 @@
-import { Box, Input } from '@chakra-ui/react';
+import { Input } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import { useRef, useState } from 'react';
 import { Footer } from '../components';
 import styles from '../style';
 import emailjs from '@emailjs/browser';
-
-const MotionBox = motion.div;
 
 function AboutMe() {
   const [name, setName] = useState('');
@@ -38,27 +36,32 @@ function AboutMe() {
     // Validate the name field
     if (name.trim() === '') {
       setNameError('Please enter your name.');
+      window.scrollTo(0, 0);
       return;
     }
 
     // Validate the email field
     if (email.trim() === '') {
       setEmailError('Please enter your email address.');
+      window.scrollTo(0, 0);
       return;
     } else if (!validateEmail(email)) {
       setEmailError('Please enter a valid email address.');
+      window.scrollTo(0, 0);
       return;
     }
 
     // Validate the service field
     if (service.trim() === '') {
       setServiceError('Please enter the service you need help with.');
+      window.scrollTo(0, 0);
       return;
     }
 
     // Validate the message field
     if (message.trim() === '') {
       setMessageError('Please enter your message.');
+      window.scrollTo(0, 0);
       return;
     }
 

@@ -58,13 +58,10 @@ const Hero = () => {
     <section style={{ backgroundColor: 'rgba(192, 192, 192, 0.5)' }}>
       <div color="white">
         <ParallaxText baseVelocity={-1}>
-          Mella Marketing&nbsp;&nbsp;&nbsp;&nbsp;
+          Mella Marketing&nbsp;&nbsp;&nbsp;&nbsp;መላዎች
+          ነን!&nbsp;&nbsp;&nbsp;&nbsp;
         </ParallaxText>
       </div>
-
-      <ParallaxText baseVelocity={1}>
-        Delivering Excellence&nbsp;&nbsp;&nbsp;&nbsp;
-      </ParallaxText>
     </section>
   );
 };
