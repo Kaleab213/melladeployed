@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import PurposeSlideFromBottom from "../components/PurposeSlide";
-import Navbar from "../components/Navbar";
-import owner from "../assets/owner.jpg";
-import map from "../assets/map.jpg";
-import { Footer } from "../components";
-import styles from "../style.js";
+import React, { useState } from 'react';
+import PurposeSlideFromBottom from '../components/PurposeSlide';
+import Navbar from '../components/Navbar';
+import owner from '../assets/owner.jpg';
+import map from '../assets/map.jpg';
+import { Footer } from '../components';
+import styles from '../style.js';
 
 export default function AboutUs() {
   const [clientY, setclientY] = useState(700);
@@ -15,19 +15,19 @@ export default function AboutUs() {
     <>
       <div
         className="text-poppins flex justify-between items-center h-fit-content"
-        style={{ background: "rgba(0, 0, 0, 0.93)" }}
+        style={{ background: 'rgba(0, 0, 0, 0.93)' }}
       >
         <Navbar />
       </div>
       <div
-        style={{ background: "#E9EFEA" }}
+        style={{ background: '#E9EFEA' }}
         className="font-poppins text-dimWhite  flex-col justify-center items-center  overflow-x-hidden"
       >
         <div className="flex justify-center items-center">
           <div className="pb-[3rem] sm:pb-[5rem] bg-[#E9EFEA] pt-[6rem] text-center">
             {/* <h1 className="text-[5rem] font-thin font-Culpa text-primary"> */}
             <h1 className="text-4xl font-bold font-poppins sm:text-5xl text-primary">
-              Trusted{" "}
+              Trusted{' '}
             </h1>
             <h1 className="text-4xl font-bold font-poppins sm:text-5xl text-primary mb-[2rem]">
               By our clients
@@ -105,7 +105,7 @@ export default function AboutUs() {
               <h1
                 className={`mb-[2rem] text-center sm:text-left ${styles.heading3__white}`}
               >
-                Our projects till now
+                Our projects
               </h1>
               <p
                 className={`mb-[2rem] text-center sm:text-left text-primary ${styles.paragraph__white}`}

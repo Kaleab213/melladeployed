@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef } from 'react';
 import {
   motion,
   useScroll,
@@ -7,10 +7,10 @@ import {
   useMotionValue,
   useVelocity,
   useAnimationFrame,
-} from "framer-motion";
-import { wrap } from "@motionone/utils";
-import heroStyles from "./Hero.module.css";
-import vanillastyle from "../stylecss.module.css";
+} from 'framer-motion';
+import { wrap } from '@motionone/utils';
+import heroStyles from './Hero.module.css';
+import vanillastyle from '../stylecss.module.css';
 
 function ParallaxText({ children, baseVelocity = 100 }) {
   const baseX = useMotionValue(0);
@@ -55,10 +55,13 @@ function ParallaxText({ children, baseVelocity = 100 }) {
 
 const Hero = () => {
   return (
-    <section style={{ backgroundColor: "rgba(192, 192, 192, 0.5)" }}>
-      <ParallaxText baseVelocity={-1}>
-        Mella Marketing&nbsp;&nbsp;&nbsp;&nbsp;
-      </ParallaxText>
+    <section style={{ backgroundColor: 'rgba(192, 192, 192, 0.5)' }}>
+      <div color="white">
+        <ParallaxText baseVelocity={-1}>
+          Mella Marketing&nbsp;&nbsp;&nbsp;&nbsp;
+        </ParallaxText>
+      </div>
+
       <ParallaxText baseVelocity={1}>
         Delivering Excellence&nbsp;&nbsp;&nbsp;&nbsp;
       </ParallaxText>

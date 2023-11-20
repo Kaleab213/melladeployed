@@ -70,7 +70,7 @@ section {
   text-transform: uppercase;
   font-size: 100px;
   /* background: rgba(192, 192, 192, 0.5); */
-  background: "#1C1D20";
+  background: '#1C1D20';
   white-space: nowrap;
   display: flex;
   flex-wrap: nowrap;
@@ -83,6 +83,10 @@ section {
 .parallax span {
   display: block;
   margin-right: 30px;
+}
+
+.parallax .scroller {
+  color: #ffffff;
 }
 
 @media (max-width: 850px) {
